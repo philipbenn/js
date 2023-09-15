@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Click Divs</title>
+    <style>
+        .my-div {
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            margin: 5px 0px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="outer">
+        <div id="div1" class="my-div">Div 1</div>
+        <div id="div2" class="my-div">Div 2</div>
+        <div id="div3" class="my-div">Div 3</div>
+        <div id="div4" class="my-div">Div 4</div>
+        <div id="div5" class="my-div">Div 5</div>
+        <div id="div6" class="my-div">Div 6</div>
+        <div id="div7" class="my-div">Div 7</div>
+        <div id="div8" class="my-div">Div 8</div>
+        <div id="div9" class="my-div">Div 9</div>
+        <div id="div10" class="my-div">Div 10</div>
+    </div>
+
+    <p id="paragraph"></p>
+
+    <script>
+        var outerDiv = document.getElementById("outer");
+        var printer = document.getElementById("paragraph");
+
+        outerDiv.addEventListener("click", function (e) {
+            if (e.target.classList.contains("my-div")) {
+                printer.innerText = "Hi from " + e.target.id;
+            }
+        });
+    </script>
+</body>
+
+</html>

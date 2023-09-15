@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Change Div Colors</title>
+</head>
+<body>
+    <div id="d1" style="width: 100px; margin: 1px;">&nbsp;</div>
+    <div id="d2" style="width: 100px; margin: 1px;">&nbsp;</div>
+    <div id="d3" style="width: 100px; margin: 1px;">&nbsp;</div>
+
+    <button id="changeColorButton">Change Colors</button>
+
+    <script>
+        function setRandomColors() {
+            var divs = document.querySelectorAll("div");
+
+            // First i find a random color for each div
+            var randomColors = [];
+            for (var i = 0; i < divs.length; i++) {
+                // This generates a random colorcode
+                var randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+                randomColors.push(randomColor);
+            }
+
+            // Then i set each of the colors for each element
+            for (var i = 0; i < divs.length; i++) {
+                divs[i].style.backgroundColor = randomColors[i];
+            }
+        }
+
+        var changeColorButton = document.getElementById("changeColorButton");
+
+        changeColorButton.addEventListener("click", setRandomColors);
+    </script>
+</body>
+</html>

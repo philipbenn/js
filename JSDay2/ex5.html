@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Year</th>
+                    <th>Make</th>
+                    <th>Model</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody id="tbody"></tbody>
+        </table>
+
+        <input id="filterPrice" type="number" placeholder="Enter price filter">
+        <button id="filterButton" class="btn btn-primary">Filter</button>
+        <button id="clearFilterButton" class="btn btn-secondary">Clear Filter</button>
+    </div>
+    </div>
+
+    <script>
+        const cars = [
+            { id: 1, year: 1997, make: 'Ford', model: 'E350', price: 3000 },
+            { id: 2, year: 1999, make: 'Chevy', model: 'Venture', price: 4900 },
+            { id: 3, year: 2000, make: 'Chevy', model: 'Venture', price: 5000 },
+            { id: 4, year: 1996, make: 'Jeep', model: 'Grand Cherokee', price: 4799 },
+            { id: 5, year: 2005, make: 'Volvo', model: 'V70', price: 44799 }
+        ];
+
+        // Function to generate HTML table rows
+        function generateTableRows(data) {
+            const tbody = document.getElementById('tbody');
+            let html = '';
+
+            data.forEach(car => {
+                html += `<tr>`;
+                html += `<td>${car.id}</td>`;
+                html += `<td>${car.year}</td>`;
+                html += `<td>${car.make}</td>`;
+                html += `<td>${car.model}</td>`;
+                html += `<td>${car.price}</td>`;
+                html += `</tr>`;
+            });
+
+            tbody.innerHTML = html;
+        }
+
+        generateTableRows(cars);
+
+        document.getElementById('filterButton').addEventListener('click', function () {
+            const filterValue = parseFloat(document.getElementById('filterPrice').value);
+            if (!isNaN(filterValue)) {
+                const filteredCars = cars.filter(car => car.price < filterValue);
+                generateTableRows(filteredCars);
+            }
+        });
+
+        document.getElementById('clearFilterButton').addEventListener('click', function () {
+            document.getElementById('filterPrice').value = '';
+            generateTableRows(cars);
+        });
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
