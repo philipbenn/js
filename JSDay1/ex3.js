@@ -1,15 +1,22 @@
-function myFilter(ARRAY, callback) {
+function myFilter(array, callback) {
     const filteredArray = [];
-
-    for (let index = 0; index < array.length; index++) {
-        if(callback[index]) {
-            filteredArray.push(array[i]);
-        }
+  
+    for (let i = 0; i < array.length; i++) {
+      if (callback(array[i], i, array)) {
+        filteredArray.push(array[i]);
+      }
     }
-
+  
     return filteredArray;
-}
+  }
+  
 
-function myMap(ARRAY, callback) {
-
-}
+  function myMap(array, callback) {
+    const mappedArray = [];
+  
+    for (let i = 0; i < array.length; i++) {
+      mappedArray.push(callback(array[i], i, array));
+    }
+  
+    return mappedArray;
+  }
