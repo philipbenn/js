@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .parent {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 1px 1px;
+        }
+        .item {
+            background-color: lightskyblue;
+            border: 1px solid #fff;
+            padding: 5px 5px 5px 2em;
+            min-height: 250px;
+        }
+    </style>
+</head>
+<body style="font-family: sans-serif">
+<div style="margin-left: 10%;width: 75%;margin-right: auto">
+    <h2>Car's 'R' Us Client Demo - Version poor ;-)</h2>
+    <div class="parent">
+        <div class="item">
+            <h3>Show all Members or Cars</h3>
+            <button id="btn-get-cars">Get Cars</button>
+            <button id="btn-get-members">Get Members</button>
+            <p id="output"></p>
+        </div>
+        <div class="item">
+            <h3>Find a single Member or Car</h3>
+            <label for="text-for-id">Id</label>&nbsp;<input id="text-for-id"/>
+            <button id="btn-find-car">Find Car</button>
+            <button id="btn-find-member">Find Member</button>
+            <p id="singleOutput"></p>
+        </div>
+        <div class="item">
+            <h3>Add a Car</h3>
+            <div><label for="id-input">ID</label>&nbsp;<input id="id-input"/></div>
+            <div><label for="brand-input">Brand</label>&nbsp;<input id="brand-input"/></div>
+            <div><label for="model-input">Model</label>&nbsp;<input id="model-input"/></div>
+            <div><label for="price-input">Price</label>&nbsp;<input id="price-input"/></div>
+            <div><label for="discount-input">Discount</label>&nbsp;<input id="discount-input"/></div>
+            <button id="btn-add-car">Submit new Car</button>
+            <p id="newCarOutput"></p>
+            <h3>Add a Member</h3>
+            <div><label for="username-input">Username</label>&nbsp;<input id="username-input"/></div>
+            <div><label for="password-input">Password</label>&nbsp;<input id="password-input"/></div>
+            <div><label for="email-input">Email</label>&nbsp;<input id="email-input"/></div>
+            <div><label for="firstName-input">First name</label>&nbsp;<input id="firstName-input"/></div>
+            <div><label for="lastName-input">Last name</label>&nbsp;<input id="lastName-input"/></div>
+            <div><label for="street-input">Street</label>&nbsp;<input id="street-input"/></div>
+            <div><label for="city-input">City</label>&nbsp;<input id="city-input"/></div>
+            <div><label for="zip-input">Zip</label>&nbsp;<input id="zip-input"/></div>
+            <button id="btn-add-member">Submit new Member</button>
+            <p id="newMemberOutput"></p>
+        </div>
+        <div class="item">
+            <h3>Edit Car</h3>
+            <label for="text-for-id2">Id</label>&nbsp;<input id="text-for-id2"/>
+            <button id="btn-edit-car" onclick="editCar()">Find Car to Edit</button>
+            <p id="editOutput"></p>
+            <button id="btn-edit-sbm-car">Submit Edited Car</button>
+            <p id="editOutputSucces"></p>
+        </div>
+    </div>
+    <a href="../../index.html"><button>Go back</button></a>
+</div>
+<script src="./member.js"></script>
+<script src="./cars.js"></script>
+</body>
+</html>
