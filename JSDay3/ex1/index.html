@@ -22,6 +22,15 @@
     </div>
     <div class="container mt-4" id="user-table-container"></div>
 
+    <div style="height: 20vh; width: 80vw; border: 1px solid black; margin-left: 150px;">
+    Promise er et objekt som viser om det er gået godt, eller om det er fejlet. Et promise har flere stadier,
+    enten er det pending hvor det venter på svar, ellers er det resolved eller rejected. Udover det har et promise objekt
+    også nogle undermetoder som then og catch.
+    En fetch metode retunere et promise som den for fra et request som den har sendt til ens api.
+    Den første .then laver responset om til json, det andet bruger så det json data, til for eksempel
+    at manipulere vores html/css. 
+    </div>
+
     <a href="../../index.html"><button>Go back</button></a>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
