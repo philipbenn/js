@@ -92,6 +92,8 @@ function editCar() {
         .then((car) => {
             
             for (const property in car) {
+                // Object.hasOwnProperty.call was default when picking "forin". It checks if the property exists in the car object
+                // (property !== "id"): This part of the condition checks if the current property is not equal to the string id
                 if (Object.hasOwnProperty.call(car, property) && (property !== "id")) {
                     const value = car[property];
                     const label = document.createElement("label");
