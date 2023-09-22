@@ -2,7 +2,7 @@ let sharedText = "";
 
 export function initP2(){
     document.querySelector("#btn-save-text").addEventListener("click", readText);
-    document.querySelector("#text").innerText = sharedText;
+    document.querySelector("#text").textContent = sharedText;
   }
 
 export function getText() {

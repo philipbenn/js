@@ -1,7 +1,7 @@
-import { renderHtml, loadHtml } from "./utils";
+import { renderHtml, loadHtml } from "./utils.js";
 
-import { initP2 } from "./pages/p2/p2";
-import { initP3 } from "./pages/p3/p3";
+import { initP2 } from "./pages/p2/p2.js";
+import { initP3 } from "./pages/p3/p3.js";
 
 window.addEventListener("load", async () => {
     const templateP1 = await loadHtml("./pages/p1/p1.html")
