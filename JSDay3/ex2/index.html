@@ -14,10 +14,11 @@
       padding: 1em;
     }
   </style>
+   <link rel="stylesheet" href="/Bootstrap/cdn.jsdelivr.net_npm_bootstrap@5.3.2_dist_css_bootstrap.min.css">
 </head>
 
 <body style="font-family: sans-serif;padding: 1em;">
-  <a href="../../index.html"><button>Go back</button></a>
+  <a href="../../index.html"><button class="btn btn-primary">Go back</button></a>
   <h2>Select a country with the mouse for info about the country</h2>
   <div style="float: left;border-style: solid;border-color: lightsteelblue">
     <?xml version="1.0" encoding="UTF-8" standalone="no"?>
@@ -281,7 +282,7 @@
     <p>Country: <span id="name"></span></p>
   </div>
 
-  <div style="height: 20vh; width: 80vw; border: 1px solid black; margin-left: 150px; display: flex;">
+  <div style="height: 20vh; width: 80vw; border: 1px solid black; margin-left: 150px; display: flex;" class="alert alert-info mt-3">
     Jeg starter med at ilføje en eventlistener på mit svg, så når jeg klikker på et land
     tjekker jeg så om det jeg har klikket på har en path i mit svg. Hvis det har en path,
     kan jeg så tage den paths id ved hjælp af target, og smide den oven i min url. Det
@@ -291,6 +292,7 @@
   </div>
   </div>
   <script src="data-fetcher.js"></script>
+  <script src="/Bootstrap/cdn.jsdelivr.net_npm_bootstrap@5.3.2_dist_js_bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

@@ -16,13 +16,14 @@
         </div>
         <button class="btn btn-primary" onclick="fetchUser()">Get User Info</button>
         <button class="btn btn-secondary" onclick="getAllUsers()">Get all users</button>
+        <a href="../../index.html"><button class="btn btn-secondary">Go back</button></a>
     </div>
     <div class="container mt-4">
         <ul class="list-group" id="user-list"></ul>
     </div>
     <div class="container mt-4" id="user-table-container"></div>
 
-    <div style="height: 20vh; width: 80vw; border: 1px solid black; margin-left: 150px;">
+    <div style="height: 20vh; width: 80vw; border: 1px solid black; margin-left: 150px; display: flex;" class="alert alert-info mt-3">
     Promise er et objekt som viser om det er gået godt, eller om det er fejlet. Et promise har flere stadier,
     enten er det pending hvor det venter på svar, ellers er det resolved eller rejected. Udover det har et promise objekt
     også nogle undermetoder som then og catch.
@@ -31,7 +32,7 @@
     at manipulere vores html/css. 
     </div>
 
-    <a href="../../index.html"><button>Go back</button></a>
+    
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
